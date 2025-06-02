@@ -321,7 +321,8 @@ open class FPNTextField: UITextField {
 		countryRepository.setup(without: countryCodes)
 	}*/
     @objc open func setCountries(excluding countries: [Int]) async {
-        let countryCodes: [FPNCountryCode] = await withTaskGroup(of: FPNCountryCode?.self) { group in
+        var countryCodes: [FPNCountryCode] = []
+        await withTaskGroup(of: FPNCountryCode?.self) { group in
             for index in countries {
                 group.addTask {
                     if let key = FPNOBJCCountryKey(rawValue: index),
@@ -332,7 +333,12 @@ open class FPNTextField: UITextField {
                     return nil
                 }
             }
-        }.compactMap { $0 } // Mengonversi hasil dari TaskGroup ke array
+            for try await result in group {
+                if let countryCode = result {
+                    countryCodes.append(countryCode)
+                }
+            }
+        }
         countryRepository.setup(without: countryCodes)
     }
 	/// Set the country list including the provided countries
@@ -347,7 +353,8 @@ open class FPNTextField: UITextField {
 		countryRepository.setup(with: countryCodes)
 	}*/
     @objc open func setCountries(including countries: [Int]) async {
-        let countryCodes: [FPNCountryCode] = await withTaskGroup(of: FPNCountryCode?.self) { group in
+        var countryCodes: [FPNCountryCode] = []
+        await withTaskGroup(of: FPNCountryCode?.self) { group in
             for index in countries {
                 group.addTask {
                     if let key = FPNOBJCCountryKey(rawValue: index),
@@ -358,7 +365,12 @@ open class FPNTextField: UITextField {
                     return nil
                 }
             }
-        }.compactMap { $0 } // Mengonversi hasil dari TaskGroup ke array
+            for try await result in group {
+                if let countryCode = result {
+                    countryCodes.append(countryCode)
+                }
+            }
+        }
         countryRepository.setup(with: countryCodes)
     }
 	// Private
