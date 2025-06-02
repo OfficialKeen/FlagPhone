@@ -332,8 +332,7 @@ open class FPNTextField: UITextField {
                     return nil
                 }
             }
-            return group.compactMap { await $0 }
-        }
+        }.compactMap { $0 } // Mengonversi hasil dari TaskGroup ke array
         countryRepository.setup(without: countryCodes)
     }
 	/// Set the country list including the provided countries
@@ -359,8 +358,7 @@ open class FPNTextField: UITextField {
                     return nil
                 }
             }
-            return group.compactMap { await $0 }
-        }
+        }.compactMap { $0 } // Mengonversi hasil dari TaskGroup ke array
         countryRepository.setup(with: countryCodes)
     }
 	// Private
