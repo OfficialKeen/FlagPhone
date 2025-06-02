@@ -283,10 +283,10 @@ open class FPNTextField: UITextField {
 		}
 	}*/
     @objc open func setFlag(key: FPNOBJCCountryKey) {
-        Task {
+        DispatchQueue.global(qos: .userInitiated).async {
             let countryCodeManager = FPNOBJCCountryCodeManager()
-            if let code = await countryCodeManager.getCountryCode(for: key), let countryCode = FPNCountryCode(rawValue: code) {
-                await setFlag(countryCode: countryCode)
+            if let code = countryCodeManager.getCountryCode(for: key), let countryCode = FPNCountryCode(rawValue: code) {
+                self.setFlag(countryCode: countryCode)
             }
         }
     }
