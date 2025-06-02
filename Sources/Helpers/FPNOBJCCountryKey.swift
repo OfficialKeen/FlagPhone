@@ -248,28 +248,7 @@ import Foundation
 	case AX
 }
 
-final class FPNOBJCCountryCode: Sendable {
-    private var dictionary: [FPNOBJCCountryKey: String] = [:]
-    private let lock = NSLock()
-
-    init(dictionary: [FPNOBJCCountryKey: String]) {
-        self.dictionary = dictionary
-    }
-
-    func countryCode(forKey key: FPNOBJCCountryKey) -> String? {
-        lock.lock()
-        defer { lock.unlock() }
-        return dictionary[key]
-    }
-
-    func setCountryCode(_ value: String, forKey key: FPNOBJCCountryKey) {
-        lock.lock()
-        defer { lock.unlock() }
-        dictionary[key] = value
-    }
-}
-
-public let FPNOBJCCountryCode: [FPNOBJCCountryKey: String] = [
+public var FPNOBJCCountryCode: [FPNOBJCCountryKey: String] = [
 	FPNOBJCCountryKey.AF: "AF",
 	FPNOBJCCountryKey.ZA: "ZA",
 	FPNOBJCCountryKey.AL: "AL",
