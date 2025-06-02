@@ -333,7 +333,7 @@ open class FPNTextField: UITextField {
                     return nil
                 }
             }
-        }.forEach { result in
+        } { result in
             if let countryCode = result {
                 countryCodes.append(countryCode)
             }
@@ -364,7 +364,7 @@ open class FPNTextField: UITextField {
                     return nil
                 }
             }
-        }.forEach { result in
+        } { result in
             if let countryCode = result {
                 countryCodes.append(countryCode)
             }
