@@ -333,10 +333,9 @@ open class FPNTextField: UITextField {
                     return nil
                 }
             }
-            for try await result in group {
-                if let countryCode = result {
-                    countryCodes.append(countryCode)
-                }
+        }.forEach { result in
+            if let countryCode = result {
+                countryCodes.append(countryCode)
             }
         }
         countryRepository.setup(without: countryCodes)
@@ -365,10 +364,9 @@ open class FPNTextField: UITextField {
                     return nil
                 }
             }
-            for try await result in group {
-                if let countryCode = result {
-                    countryCodes.append(countryCode)
-                }
+        }.forEach { result in
+            if let countryCode = result {
+                countryCodes.append(countryCode)
             }
         }
         countryRepository.setup(with: countryCodes)
