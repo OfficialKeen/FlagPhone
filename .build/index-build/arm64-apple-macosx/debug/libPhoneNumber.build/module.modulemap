@@ -1,0 +1,4 @@
+module libPhoneNumber {
+    umbrella "/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/libPhoneNumber"
+    export *
+}

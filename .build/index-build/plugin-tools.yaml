@@ -1,0 +1,62 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "FlagPhoneNumber-arm64-apple-macosx15.0-debug.module": ["<FlagPhoneNumber-arm64-apple-macosx15.0-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "libPhoneNumber-arm64-apple-macosx15.0-debug.module": ["<libPhoneNumber-arm64-apple-macosx15.0-debug.module>"]
+  "main": ["<FlagPhoneNumber-arm64-apple-macosx15.0-debug.module>"]
+  "test": ["<FlagPhoneNumber-arm64-apple-macosx15.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/libPhoneNumber/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/keenoi/iOS/Olsera/Fork/FlagPhone/.build/index-build/arm64-apple-macosx/debug/FlagPhoneNumber.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/FPNCountry.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/FPNCountryListViewController.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/FPNCountryPicker/FPNCountryPicker.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/FPNCountryPicker/FPNCountryView.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/FPNCountryPicker/FPNNibLoadingView.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/FPNCountryRepository.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/FPNTextField.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/Helpers/Bundle+Extension.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/Helpers/FPNCountryCode.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/Helpers/FPNFormat.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/Helpers/FPNOBJCCountryKey.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/Helpers/FPNTextFieldDelegate.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/Helpers/FPNUtils.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/.build/index-build/arm64-apple-macosx/debug/FlagPhoneNumber.build/DerivedSources/resource_bundle_accessor.swift"]
+    outputs: ["/Users/keenoi/iOS/Olsera/Fork/FlagPhone/.build/index-build/arm64-apple-macosx/debug/FlagPhoneNumber.build/sources"]
+    description: "Write auxiliary file /Users/keenoi/iOS/Olsera/Fork/FlagPhone/.build/index-build/arm64-apple-macosx/debug/FlagPhoneNumber.build/sources"
+
+  "/Users/keenoi/iOS/Olsera/Fork/FlagPhone/.build/index-build/arm64-apple-macosx/debug/FlagPhoneNumber_FlagPhoneNumber.bundle/countryCodes.json":
+    tool: copy-tool
+    inputs: ["/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/Resources/countryCodes.json"]
+    outputs: ["/Users/keenoi/iOS/Olsera/Fork/FlagPhone/.build/index-build/arm64-apple-macosx/debug/FlagPhoneNumber_FlagPhoneNumber.bundle/countryCodes.json"]
+    description: "Copying /Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/Resources/countryCodes.json"
+
+  "/Users/keenoi/iOS/Olsera/Fork/FlagPhone/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/keenoi/iOS/Olsera/Fork/FlagPhone/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/keenoi/iOS/Olsera/Fork/FlagPhone/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "<FlagPhoneNumber-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/keenoi/iOS/Olsera/Fork/FlagPhone/.build/index-build/arm64-apple-macosx/debug/Modules/FlagPhoneNumber.swiftmodule"]
+    outputs: ["<FlagPhoneNumber-arm64-apple-macosx15.0-debug.module>"]
+
+  "C.FlagPhoneNumber-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/FPNCountry.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/FPNCountryListViewController.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/FPNCountryPicker/FPNCountryPicker.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/FPNCountryPicker/FPNCountryView.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/FPNCountryPicker/FPNNibLoadingView.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/FPNCountryRepository.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/FPNTextField.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/Helpers/Bundle+Extension.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/Helpers/FPNCountryCode.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/Helpers/FPNFormat.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/Helpers/FPNOBJCCountryKey.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/Helpers/FPNTextFieldDelegate.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/Helpers/FPNUtils.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/.build/index-build/arm64-apple-macosx/debug/FlagPhoneNumber.build/DerivedSources/resource_bundle_accessor.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","<FlagPhoneNumber-arm64-apple-macosx15.0-debug.module-resources>","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/libPhoneNumber/Internal/NBRegExMatcher.h","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/libPhoneNumber/Internal/NBRegularExpressionCache.h","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/libPhoneNumber/NBAsYouTypeFormatter.h","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/libPhoneNumber/NBGeneratedPhoneNumberMetaData.h","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/libPhoneNumber/NBMetadataHelper.h","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/libPhoneNumber/NBNumberFormat.h","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/libPhoneNumber/NBPhoneMetaData.h","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/libPhoneNumber/NBPhoneNumber.h","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/libPhoneNumber/NBPhoneNumberDefines.h","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/libPhoneNumber/NBPhoneNumberDesc.h","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/libPhoneNumber/NBPhoneNumberUtil+ShortNumber.h","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/libPhoneNumber/NBPhoneNumberUtil.h","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/libPhoneNumber/NSArray+NBAdditions.h","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/.build/index-build/arm64-apple-macosx/debug/FlagPhoneNumber.build/sources"]
+    outputs: ["/Users/keenoi/iOS/Olsera/Fork/FlagPhone/.build/index-build/arm64-apple-macosx/debug/Modules/FlagPhoneNumber.swiftmodule"]
+    description: "Compiling Swift Module 'FlagPhoneNumber' (14 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","FlagPhoneNumber","-emit-dependencies","-emit-module","-emit-module-path","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/.build/index-build/arm64-apple-macosx/debug/Modules/FlagPhoneNumber.swiftmodule","-output-file-map","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/.build/index-build/arm64-apple-macosx/debug/FlagPhoneNumber.build/output-file-map.json","-parse-as-library","-incremental","@/Users/keenoi/iOS/Olsera/Fork/FlagPhone/.build/index-build/arm64-apple-macosx/debug/FlagPhoneNumber.build/sources","-I","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx10.13","-enable-batch-mode","-index-store-path","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/.build/index-build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-Xcc","-fmodule-map-file=/Users/keenoi/iOS/Olsera/Fork/FlagPhone/.build/index-build/arm64-apple-macosx/debug/libPhoneNumber.build/module.modulemap","-Xcc","-I","-Xcc","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/libPhoneNumber","-module-cache-path","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/.build/index-build/arm64-apple-macosx/debug/FlagPhoneNumber.build/FlagPhoneNumber-Swift.h","-swift-version","6","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","flagphone"]
+
+  "FlagPhoneNumber-arm64-apple-macosx15.0-debug.module-resources":
+    tool: phony
+    inputs: ["/Users/keenoi/iOS/Olsera/Fork/FlagPhone/.build/index-build/arm64-apple-macosx/debug/FlagPhoneNumber_FlagPhoneNumber.bundle/countryCodes.json"]
+    outputs: ["<FlagPhoneNumber-arm64-apple-macosx15.0-debug.module-resources>"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Sources/libPhoneNumber/","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Package.swift","/Users/keenoi/iOS/Olsera/Fork/FlagPhone/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
