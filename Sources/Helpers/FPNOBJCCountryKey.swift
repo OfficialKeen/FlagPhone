@@ -248,7 +248,7 @@ import Foundation
 	case AX
 }
 
-public let FPNOBJCCountryCode: [FPNOBJCCountryKey: String] = [
+@unchecked public let FPNOBJCCountryCode: [FPNOBJCCountryKey: String] = [
 	FPNOBJCCountryKey.AF: "AF",
 	FPNOBJCCountryKey.ZA: "ZA",
 	FPNOBJCCountryKey.AL: "AL",
