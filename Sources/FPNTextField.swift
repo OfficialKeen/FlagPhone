@@ -283,10 +283,15 @@ open class FPNTextField: UITextField {
 		}
 	}*/
     @objc open func setFlag(key: FPNOBJCCountryKey) {
-        DispatchQueue.global(qos: .userInitiated).async {
-            let countryCodeManager = FPNOBJCCountryCodeManager()
-            if let code = countryCodeManager.getCountryCode(for: key), let countryCode = FPNCountryCode(rawValue: code) {
-                self.setFlag(countryCode: countryCode)
+        // Membuat instance dari FPNOBJCCountryCodeManager
+        let manager = FPNOBJCCountryCodeManager()
+        
+        // Menggunakan Task untuk memanggil fungsi yang menggunakan actor
+        Task {
+            // Mendapatkan kode negara berdasarkan key yang diberikan
+            if let code = await manager.getCountryCode(for: key), let countryCode = FPNCountryCode(rawValue: code) {
+                // Memanggil fungsi setFlag dengan kode negara yang didapatkan
+                setFlag(countryCode: countryCode)
             }
         }
     }
