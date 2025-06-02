@@ -249,6 +249,7 @@ import Foundation
 }
 
 public actor FPNOBJCCountryCodeManager {
+    static let shared = FPNOBJCCountryCodeManager()
     private var countryCode: [FPNOBJCCountryKey: String] = [
         FPNOBJCCountryKey.AF: "AF",
         FPNOBJCCountryKey.ZA: "ZA",
