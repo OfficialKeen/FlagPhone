@@ -322,11 +322,8 @@ open class FPNTextField: UITextField {
 	}*/
     @objc open func setCountries(excluding countries: [Int]) {
         let countryCodes: [FPNCountryCode] = countries.compactMap({ index in
-            if let key = FPNOBJCCountryKey(rawValue: index) {
-                // Menggunakan FPNOBJCCountryCodeManager untuk mendapatkan kode negara
-                if let code = await FPNOBJCCountryCodeManager().getCountryCode(for: key), let countryCode = FPNCountryCode(rawValue: code) {
-                    return countryCode
-                }
+            if let key = FPNOBJCCountryKey(rawValue: index), let code = FPNOBJCCountryCodeManager().getCountryCode(for: key), let countryCode = FPNCountryCode(rawValue: code) {
+                return countryCode
             }
             return nil
         })
