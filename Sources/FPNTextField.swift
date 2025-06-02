@@ -289,7 +289,10 @@ open class FPNTextField: UITextField {
         // Menggunakan DispatchQueue untuk menjalankan kode secara asynchronous
         DispatchQueue.global().async {
             // Mendapatkan kode negara berdasarkan key yang diberikan
-            if let code = manager.getCountryCode(for: key), let countryCode = FPNCountryCode(rawValue: code) {
+            let code = manager.getCountryCode(for: key)
+            
+            // Memeriksa apakah kode negara valid
+            if let code = code, let countryCode = FPNCountryCode(rawValue: code) {
                 // Memanggil fungsi setFlag dengan kode negara yang didapatkan
                 DispatchQueue.main.async {
                     self.setFlag(countryCode: countryCode)
