@@ -283,8 +283,9 @@ open class FPNTextField: UITextField {
 		}
 	}*/
     @objc open func setFlag(key: FPNOBJCCountryKey) async {
-        if let code = await FPNOBJCCountryCodeManager.shared.getCountryCode(for: key), let countryCode = FPNCountryCode(rawValue: code) {
-            setFlag(countryCode: countryCode)
+        let countryCodeManager = FPNOBJCCountryCodeManager()
+        if let code = await countryCodeManager.getCountryCode(for: key), let countryCode = FPNCountryCode(rawValue: code) {
+            await setFlag(countryCode: countryCode)
         }
     }
 	/// Set the country list excluding the provided countries
