@@ -335,7 +335,7 @@ open class FPNTextField: UITextField {
         countryRepository.setup(without: countryCodes)
     }
 	/// Set the country list including the provided countries
-	@objc open func setCountries(including countries: [Int]) {
+	/*@objc open func setCountries(including countries: [Int]) {
 		let countryCodes: [FPNCountryCode] = countries.compactMap({ index in
 			if let key = FPNOBJCCountryKey(rawValue: index), let code = FPNOBJCCountryCode[key], let countryCode = FPNCountryCode(rawValue: code) {
 				return countryCode
@@ -344,8 +344,21 @@ open class FPNTextField: UITextField {
 		})
 
 		countryRepository.setup(with: countryCodes)
-	}
+	}*/
+    @objc open func setCountries(including countries: [Int]) async {
+        var countryCodes: [FPNCountryCode] = []
+        
+        for index in countries {
+            if let key = FPNOBJCCountryKey(rawValue: index) {
+                let countryCodeManager = FPNOBJCCountryCodeManager()
+                if let code = await countryCodeManager.getCountryCode(for: key), let countryCode = FPNCountryCode(rawValue: code) {
+                    countryCodes.append(countryCode)
+                }
+            }
+        }
 
+        countryRepository.setup(with: countryCodes)
+    }
 	// Private
 
 	@objc private func didEditText() {
