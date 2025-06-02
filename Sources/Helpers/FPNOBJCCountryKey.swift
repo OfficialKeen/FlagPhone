@@ -8,244 +8,244 @@
 import Foundation
 
 @objc public enum FPNOBJCCountryKey: Int {
-	case AF
-	case ZA
-	case AL
-	case DZ
-	case DE
-	case AD
-	case AO
-	case AI
-	case AG
-	case SA
-	case AR
-	case AM
-	case AW
-	case AU
-	case AT
-	case AZ
-	case BS
-	case BH
-	case BD
-	case BB
-	case BE
-	case BZ
-	case BM
-	case BT
-	case BY
-	case BO
-	case BA
-	case BW
-	case BN
-	case BR
-	case BG
-	case BF
-	case BI
-	case BJ
-	case KH
-	case CM
-	case CA
-	case CV
-	case CL
-	case CN
-	case CY
-	case CO
-	case KM
-	case CG
-	case CD
-	case KP
-	case KR
-	case CR
-	case HR
-	case CU
-	case CI
-	case DK
-	case DJ
-	case DM
-	case ES
-	case EE
-	case FJ
-	case FI
-	case FR
-	case GA
-	case GM
-	case GH
-	case GI
-	case GD
-	case GL
-	case GR
-	case GP
-	case GU
-	case GT
-	case GG
-	case GN
-	case GQ
-	case GW
-	case GY
-	case GF
-	case GE
-	case HT
-	case HN
-	case HK
-	case HU
-	case IN
-	case ID
-	case IQ
-	case IR
-	case IE
-	case IS
-	case IL
-	case IT
-	case JM
-	case JP
-	case JE
-	case JO
-	case KZ
-	case KE
-	case KG
-	case KI
-	case KW
-	case RE
-	case LA
-	case LS
-	case LV
-	case LB
-	case LY
-	case LR
-	case LI
-	case LT
-	case LU
-	case MO
-	case MK
-	case MG
-	case MY
-	case MW
-	case MV
-	case ML
-	case MT
-	case MA
-	case MQ
-	case MU
-	case MR
-	case YT
-	case MX
-	case MD
-	case MC
-	case MN
-	case MS
-	case ME
-	case MZ
-	case MM
-	case NA
-	case NR
-	case NI
-	case NE
-	case NG
-	case NU
-	case NO
-	case NC
-	case NZ
-	case NP
-	case OM
-	case UG
-	case UZ
-	case PK
-	case PW
-	case PA
-	case PG
-	case PY
-	case NL
-	case PH
-	case PL
-	case PF
-	case PR
-	case PT
-	case PE
-	case QA
-	case RO
-	case GB
-	case RU
-	case RW
-	case CF
-	case DO
-	case BL
-	case KN
-	case SM
-	case MF
-	case PM
-	case VC
-	case SH
-	case LC
-	case SV
-	case WS
-	case AS
-	case ST
-	case RS
-	case SC
-	case SL
-	case SG
-	case SK
-	case SI
-	case SO
-	case SD
-	case SS
-	case LK
-	case CH
-	case SR
-	case SE
-	case SJ
-	case SZ
-	case SY
-	case SN
-	case TJ
-	case TZ
-	case TW
-	case TD
-	case CZ
-	case IO
-	case PS
-	case TH
-	case TL
-	case TG
-	case TK
-	case TO
-	case TT
-	case TN
-	case TM
-	case TR
-	case TV
-	case UA
-	case UY
-	case VU
-	case VE
-	case VN
-	case WF
-	case YE
-	case ZM
-	case ZW
-	case EG
-	case AE
-	case EC
-	case ER
-	case VA
-	case FM
-	case US
-	case ET
-	case CX
-	case NF
-	case IM
-	case KY
-	case CC
-	case CK
-	case FO
-	case FK
-	case MP
-	case MH
-	case SB
-	case TC
-	case VG
-	case VI
-	case AX
+    case AF = 1  // Afghanistan
+    case ZA = 2  // South Africa
+    case AL = 3  // Albania
+    case DZ = 4  // Algeria
+    case DE = 5  // Germany
+    case AD = 6  // Andorra
+    case AO = 7  // Angola
+    case AI = 8  // Anguilla
+    case AG = 9  // Antigua and Barbuda
+    case SA = 10 // Saudi Arabia
+    case AR = 11 // Argentina
+    case AM = 12 // Armenia
+    case AW = 13 // Aruba
+    case AU = 14 // Australia
+    case AT = 15 // Austria
+    case AZ = 16 // Azerbaijan
+    case BS = 17 // Bahamas
+    case BH = 18 // Bahrain
+    case BD = 19 // Bangladesh
+    case BB = 20 // Barbados
+    case BE = 21 // Belgium
+    case BZ = 22 // Belize
+    case BM = 23 // Bermuda
+    case BT = 24 // Bhutan
+    case BY = 25 // Belarus
+    case BO = 26 // Bolivia
+    case BA = 27 // Bosnia and Herzegovina
+    case BW = 28 // Botswana
+    case BN = 29 // Brunei
+    case BR = 30 // Brazil
+    case BG = 31 // Bulgaria
+    case BF = 32 // Burkina Faso
+    case BI = 33 // Burundi
+    case BJ = 34 // Benin
+    case KH = 35 // Cambodia
+    case CM = 36 // Cameroon
+    case CA = 37 // Canada
+    case CV = 38 // Cape Verde
+    case CL = 39 // Chile
+    case CN = 40 // China
+    case CY = 41 // Cyprus
+    case CO = 42 // Colombia
+    case KM = 43 // Comoros
+    case CG = 44 // Congo
+    case CD = 45 // Democratic Republic of the Congo
+    case KP = 46 // North Korea
+    case KR = 47 // South Korea
+    case CR = 48 // Costa Rica
+    case HR = 49 // Croatia
+    case CU = 50 // Cuba
+    case CI = 51 // Ivory Coast
+    case DK = 52 // Denmark
+    case DJ = 53 // Djibouti
+    case DM = 54 // Dominica
+    case ES = 55 // Spain
+    case EE = 56 // Estonia
+    case FJ = 57 // Fiji
+    case FI = 58 // Finland
+    case FR = 59 // France
+    case GA = 60 // Gabon
+    case GM = 61 // Gambia
+    case GH = 62 // Ghana
+    case GI = 63 // Gibraltar
+    case GD = 64 // Grenada
+    case GL = 65 // Greenland
+    case GR = 66 // Greece
+    case GP = 67 // Guadeloupe
+    case GU = 68 // Guam
+    case GT = 69 // Guatemala
+    case GG = 70 // Guernsey
+    case GN = 71 // Guinea
+    case GQ = 72 // Equatorial Guinea
+    case GW = 73 // Guinea-Bissau
+    case GY = 74 // Guyana
+    case GF = 75 // French Guiana
+    case GE = 76 // Georgia
+    case HT = 77 // Haiti
+    case HN = 78 // Honduras
+    case HK = 79 // Hong Kong
+    case HU = 80 // Hungary
+    case IN = 81 // India
+    case ID = 82 // Indonesia
+    case IQ = 83 // Iraq
+    case IR = 84 // Iran
+    case IE = 85 // Ireland
+    case IS = 86 // Iceland
+    case IL = 87 // Israel
+    case IT = 88 // Italy
+    case JM = 89 // Jamaica
+    case JP = 90 // Japan
+    case JE = 91 // Jersey
+    case JO = 92 // Jordan
+    case KZ = 93 // Kazakhstan
+    case KE = 94 // Kenya
+    case KG = 95 // Kyrgyzstan
+    case KI = 96 // Kiribati
+    case KW = 97 // Kuwait
+    case RE = 98 // Reunion
+    case LA = 99 // Laos
+    case LS = 100 // Lesotho
+    case LV = 101 // Latvia
+    case LB = 102 // Lebanon
+    case LY = 103 // Libya
+    case LR = 104 // Liberia
+    case LI = 105 // Liechtenstein
+    case LT = 106 // Lithuania
+    case LU = 107 // Luxembourg
+    case MO = 108 // Macau
+    case MK = 109 // North Macedonia
+    case MG = 110 // Madagascar
+    case MY = 111 // Malaysia
+    case MW = 112 // Malawi
+    case MV = 113 // Maldives
+    case ML = 114 // Mali
+    case MT = 115 // Malta
+    case MA = 116 // Morocco
+    case MQ = 117 // Martinique
+    case MU = 118 // Mauritius
+    case MR = 119 // Mauritania
+    case YT = 120 // Mayotte
+    case MX = 121 // Mexico
+    case MD = 122 // Moldova
+    case MC = 123 // Monaco
+    case MN = 124 // Mongolia
+    case MS = 125 // Montserrat
+    case ME = 126 // Montenegro
+    case MZ = 127 // Mozambique
+    case MM = 128 // Myanmar
+    case NA = 129 // Namibia
+    case NR = 130 // Nauru
+    case NI = 131 // Nicaragua
+    case NE = 132 // Niger
+    case NG = 133 // Nigeria
+    case NU = 134 // Niue
+    case NO = 135 // Norway
+    case NC = 136 // New Caledonia
+    case NZ = 137 // New Zealand
+    case NP = 138 // Nepal
+    case OM = 139 // Oman
+    case UG = 140 // Uganda
+    case UZ = 141 // Uzbekistan
+    case PK = 142 // Pakistan
+    case PW = 143 // Palau
+    case PA = 144 // Panama
+    case PG = 145 // Papua New Guinea
+    case PY = 146 // Paraguay
+    case NL = 147 // Netherlands
+    case PH = 148 // Philippines
+    case PL = 149 // Poland
+    case PF = 150 // French Polynesia
+    case PR = 151 // Puerto Rico
+    case PT = 152 // Portugal
+    case PE = 153 // Peru
+    case QA = 154 // Qatar
+    case RO = 155 // Romania
+    case GB = 156 // United Kingdom
+    case RU = 157 // Russia
+    case RW = 158 // Rwanda
+    case CF = 159 // Central African Republic
+    case DO = 160 // Dominican Republic
+    case BL = 161 // Saint Barthelemy
+    case KN = 162 // Saint Kitts and Nevis
+    case SM = 163 // San Marino
+    case MF = 164 // Saint Martin
+    case PM = 165 // Saint Pierre and Miquelon
+    case VC = 166 // Saint Vincent and the Grenadines
+    case SH = 167 // Saint Helena
+    case LC = 168 // Saint Lucia
+    case SV = 169 // El Salvador
+    case WS = 170 // Samoa
+    case AS = 171 // American Samoa
+    case ST = 172 // Sao Tome and Principe
+    case RS = 173 // Serbia
+    case SC = 174 // Seychelles
+    case SL = 175 // Sierra Leone
+    case SG = 176 // Singapore
+    case SK = 177 // Slovakia
+    case SI = 178 // Slovenia
+    case SO = 179 // Somalia
+    case SD = 180 // Sudan
+    case SS = 181 // South Sudan
+    case LK = 182 // Sri Lanka
+    case CH = 183 // Switzerland
+    case SR = 184 // Suriname
+    case SE = 185 // Sweden
+    case SJ = 186 // Svalbard and Jan Mayen
+    case SZ = 187 // Eswatini
+    case SY = 188 // Syria
+    case SN = 189 // Senegal
+    case TJ = 190 // Tajikistan
+    case TZ = 191 // Tanzania
+    case TW = 192 // Taiwan
+    case TD = 193 // Chad
+    case CZ = 194 // Czech Republic
+    case IO = 195 // British Indian Ocean Territory
+    case PS = 196 // Palestine
+    case TH = 197 // Thailand
+    case TL = 198 // Timor-Leste
+    case TG = 199 // Togo
+    case TK = 200 // Tokelau
+    case TO = 201 // Tonga
+    case TT = 202 // Trinidad and Tobago
+    case TN = 203 // Tunisia
+    case TM = 204 // Turkmenistan
+    case TR = 205 // Turkey
+    case TV = 206 // Tuvalu
+    case UA = 207 // Ukraine
+    case UY = 208 // Uruguay
+    case VU = 209 // Vanuatu
+    case VE = 210 // Venezuela
+    case VN = 211 // Vietnam
+    case WF = 212 // Wallis and Futuna
+    case YE = 213 // Yemen
+    case ZM = 214 // Zambia
+    case ZW = 215 // Zimbabwe
+    case EG = 216 // Egypt
+    case AE = 217 // United Arab Emirates
+    case EC = 218 // Ecuador
+    case ER = 219 // Eritrea
+    case VA = 220 // Vatican City
+    case FM = 221 // Micronesia
+    case US = 222 // United States
+    case ET = 223 // Ethiopia
+    case CX = 224 // Christmas Island
+    case NF = 225 // Norfolk Island
+    case IM = 226 // Isle of Man
+    case KY = 227 // Cayman Islands
+    case CC = 228 // Cocos (Keeling) Islands
+    case CK = 229 // Cook Islands
+    case FO = 230 // Faroe Islands
+    case FK = 231 // Falkland Islands
+    case MP = 232 // Northern Mariana Islands
+    case MH = 233 // Marshall Islands
+    case SB = 234 // Solomon Islands
+    case TC = 235 // Turks and Caicos Islands
+    case VG = 236 // British Virgin Islands
+    case VI = 237 // US Virgin Islands
+    case AX = 238 // Aland Islands
 }
 
 /*public let FPNOBJCCountryCode: [FPNOBJCCountryKey: String] = [
