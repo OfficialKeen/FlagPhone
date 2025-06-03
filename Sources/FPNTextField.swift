@@ -61,7 +61,7 @@ open class FPNTextField: UITextField {
 	}
 
 	open var countryRepository = FPNCountryRepository()
-
+    open var countryCodeManager = FPNOBJCCountryCodeManager()
 	open var selectedCountry: FPNCountry? {
 		didSet {
 			updateUI()
