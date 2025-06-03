@@ -283,13 +283,16 @@ open class FPNTextField: UITextField {
 		}
 	}*/
     @objc open func setFlag(key: FPNOBJCCountryKey) async {
-        // Menggunakan manajer kode negara untuk mendapatkan kode negara
-        if let code = await FPNOBJCCountryCodeManager().getCountryCode(for: key), let countryCode = FPNCountryCode(rawValue: code) {
-            // Memanggil fungsi setFlag dengan kode negara yang didapatkan
+        // Access the actor instance
+        let countryCodeManager = FPNOBJCCountryCodeManager()
+        
+        // Use await to safely access the actor's method
+        if let code = await countryCodeManager.getCountryCode(for: key), let countryCode = FPNCountryCode(rawValue: code) {
+            // Call the setFlag function with the countryCode
             setFlag(countryCode: countryCode)
         } else {
-            // Handle jika kode negara tidak ditemukan atau tidak valid
-            print("Kode negara tidak ditemukan atau tidak valid untuk kunci \(key)")
+            // Handle the case where the country code is not found or invalid
+            print("Country code not found or invalid for key \(key)")
         }
     }
 	/// Set the country list excluding the provided countries
