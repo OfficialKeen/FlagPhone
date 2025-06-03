@@ -489,7 +489,7 @@ import Foundation
 	FPNOBJCCountryKey.AX: "AX"
 ]*/
 
-public class FPNOBJCCountryCodeManager {
+public actor FPNOBJCCountryCodeManager {
     private var countryCode: [FPNOBJCCountryKey: String] = [
         .AF: "AF",
         .ZA: "ZA",
