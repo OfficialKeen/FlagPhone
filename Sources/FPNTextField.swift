@@ -276,13 +276,13 @@ open class FPNTextField: UITextField {
 	}
 
 	/// Set the country image according to country code. Example "FR"
-	/*@objc open func setFlag(key: FPNOBJCCountryKey) {
+	@objc open func setFlag(key: FPNOBJCCountryKey) {
 		if let code = FPNOBJCCountryCode[key], let countryCode = FPNCountryCode(rawValue: code) {
 
 			setFlag(countryCode: countryCode)
 		}
-	}*/
-    @objc open func setFlag(key: FPNOBJCCountryKey) async {
+	}
+    /*@objc open func setFlag(key: FPNOBJCCountryKey) async {
         // Access the actor instance
         let countryCodeManager = FPNOBJCCountryCodeManager()
         
@@ -294,7 +294,7 @@ open class FPNTextField: UITextField {
             // Handle the case where the country code is not found or invalid
             print("Country code not found or invalid for key \(key)")
         }
-    }
+    }*/
 	/// Set the country list excluding the provided countries
 	open func setCountries(excluding countries: [FPNCountryCode]) {
 		countryRepository.setup(without: countries)
@@ -318,7 +318,7 @@ open class FPNTextField: UITextField {
 	}
 
 	/// Set the country list excluding the provided countries
-	/*@objc open func setCountries(excluding countries: [Int]) {
+	@objc open func setCountries(excluding countries: [Int]) {
 		let countryCodes: [FPNCountryCode] = countries.compactMap({ index in
 			if let key = FPNOBJCCountryKey(rawValue: index), let code = FPNOBJCCountryCode[key], let countryCode = FPNCountryCode(rawValue: code) {
 				return countryCode
@@ -327,8 +327,8 @@ open class FPNTextField: UITextField {
 		})
 
 		countryRepository.setup(without: countryCodes)
-	}*/
-    @objc open func setCountries(excluding countries: [Int]) async {
+	}
+    /*@objc open func setCountries(excluding countries: [Int]) async {
         var countryCodes: [FPNCountryCode] = []
         
         for index in countries {
@@ -341,9 +341,9 @@ open class FPNTextField: UITextField {
         }
 
         countryRepository.setup(without: countryCodes)
-    }
+    }*/
 	/// Set the country list including the provided countries
-	/*@objc open func setCountries(including countries: [Int]) {
+	@objc open func setCountries(including countries: [Int]) {
 		let countryCodes: [FPNCountryCode] = countries.compactMap({ index in
 			if let key = FPNOBJCCountryKey(rawValue: index), let code = FPNOBJCCountryCode[key], let countryCode = FPNCountryCode(rawValue: code) {
 				return countryCode
@@ -352,8 +352,8 @@ open class FPNTextField: UITextField {
 		})
 
 		countryRepository.setup(with: countryCodes)
-	}*/
-    @objc open func setCountries(including countries: [Int]) async {
+	}
+    /*@objc open func setCountries(including countries: [Int]) async {
         var countryCodes: [FPNCountryCode] = []
         
         for index in countries {
@@ -366,7 +366,7 @@ open class FPNTextField: UITextField {
         }
 
         countryRepository.setup(with: countryCodes)
-    }
+    }*/
 	// Private
 
 	@objc private func didEditText() {
