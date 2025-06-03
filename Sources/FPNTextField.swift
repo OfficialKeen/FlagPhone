@@ -281,27 +281,16 @@ open class FPNTextField: UITextField {
 
 			setFlag(countryCode: countryCode)
 		}
-	}*/
+     }*/
     @objc open func setFlag(key: FPNOBJCCountryKey) {
-        Task {
-            if let code = await countryCodeManager.getCountryCode(for: key), let countryCode = FPNCountryCode(rawValue: code) {
-                setFlag(countryCode: countryCode)
+        DispatchQueue.global().async {
+            if let code = self.countryCodeManager.getCountryCode(for: key), let countryCode = FPNCountryCode(rawValue: code) {
+                DispatchQueue.main.async {
+                    self.setFlag(countryCode: countryCode)
+                }
             }
         }
     }
-    /*@objc open func setFlag(key: FPNOBJCCountryKey) async {
-        // Access the actor instance
-        let countryCodeManager = FPNOBJCCountryCodeManager()
-        
-        // Use await to safely access the actor's method
-        if let code = await countryCodeManager.getCountryCode(for: key), let countryCode = FPNCountryCode(rawValue: code) {
-            // Call the setFlag function with the countryCode
-            await setFlag(countryCode: countryCode)
-        } else {
-            // Handle the case where the country code is not found or invalid
-            print("Country code not found or invalid for key \(key)")
-        }
-    }*/
 	/// Set the country list excluding the provided countries
 	open func setCountries(excluding countries: [FPNCountryCode]) {
 		countryRepository.setup(without: countries)
