@@ -276,12 +276,19 @@ open class FPNTextField: UITextField {
 	}
 
 	/// Set the country image according to country code. Example "FR"
-	@objc open func setFlag(key: FPNOBJCCountryKey) {
+	/*@objc open func setFlag(key: FPNOBJCCountryKey) {
 		if let code = FPNOBJCCountryCode[key], let countryCode = FPNCountryCode(rawValue: code) {
 
 			setFlag(countryCode: countryCode)
 		}
-	}
+	}*/
+    @objc open func setFlag(key: FPNOBJCCountryKey) {
+        Task {
+            if let code = await countryCodeManager.getCountryCode(for: key), let countryCode = FPNCountryCode(rawValue: code) {
+                setFlag(countryCode: countryCode)
+            }
+        }
+    }
     /*@objc open func setFlag(key: FPNOBJCCountryKey) async {
         // Access the actor instance
         let countryCodeManager = FPNOBJCCountryCodeManager()
