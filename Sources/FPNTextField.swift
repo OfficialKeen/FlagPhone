@@ -289,7 +289,7 @@ open class FPNTextField: UITextField {
         // Use await to safely access the actor's method
         if let code = await countryCodeManager.getCountryCode(for: key), let countryCode = FPNCountryCode(rawValue: code) {
             // Call the setFlag function with the countryCode
-            setFlag(countryCode: countryCode)
+            await setFlag(countryCode: countryCode)
         } else {
             // Handle the case where the country code is not found or invalid
             print("Country code not found or invalid for key \(key)")
