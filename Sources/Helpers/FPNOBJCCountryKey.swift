@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum FPNOBJCCountryKey: Int {
+@objc public enum FPNOBJCCountryKey: Int {
 	case AF
 	case ZA
 	case AL
